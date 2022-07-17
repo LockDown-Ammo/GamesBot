@@ -14,6 +14,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [Connect 4](#connect-4)
 - [Break Lock](#break-lock)
 - [2048](#2048)
+- [TicTacToe](#ttt)
   
     > More Coming soon...
 
@@ -95,6 +96,22 @@ Are you smart enough to complete it? Check it out!!
 > 💡 Info: 
         - Command: >>2048                     ( - )
         - Multiplayer: False                  ( - )
+```
+
+## <a name="ttt">TicTacToe</a>
+
+Bro you live under the rock? Not knowing tic tac toe? Its also known by the name cross and noughts... If u dont know aint teaching ya
+
+Have fun :D
+
+```text
+> ⚠️ Feature: Images and GIFs for better understanding never coming...
+```
+
+```text
+> 💡 Info: 
+        - Command: >>ttt                      ( Case-Insensitive )
+        - Multiplayer: True                       ( 2 Players )
 ```
 
 ---

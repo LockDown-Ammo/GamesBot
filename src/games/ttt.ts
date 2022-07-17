@@ -85,7 +85,7 @@ export default class TicTacToe extends GameBase {
         return n == 0 ? 'ㅤ' : (n == 1 ? 'X' : 'O');
     }
 
-    private currentPlayerStateStyle(n: number): MessageButtonStyles {
+    private currentPlayerStateStyle(n: number): import("discord.js/typings/enums").MessageButtonStyles {
         return n == 0 ? MessageButtonStyles.SECONDARY : (n == 1 ? MessageButtonStyles.DANGER : MessageButtonStyles.SUCCESS);
     }
 
