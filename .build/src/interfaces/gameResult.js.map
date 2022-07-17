@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/interfaces/gameResult.ts"],
+  "sourcesContent": ["interface GameResult {\r\n    result: ResultType;\r\n    error?: string;\r\n    name?: string;\r\n    score?: string;\r\n}\r\n\r\nexport default GameResult;\r\n\r\nexport enum ResultType {\r\n    TIMEOUT = 'timeout',\r\n    WINNER = 'winner',\r\n    LOSER = 'loser',\r\n    TIE = 'tie',\r\n    ERROR = 'error',\r\n    DELETED = 'deleted',\r\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AASO,IAAK;AAAL,UAAK,aAAL;AACH,2BAAU;AACV,0BAAS;AACT,yBAAQ;AACR,uBAAM;AACN,yBAAQ;AACR,2BAAU;AAAA,GANF;",
+  "names": []
+}
