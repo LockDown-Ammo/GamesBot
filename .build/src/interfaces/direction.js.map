@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/interfaces/direction.ts"],
-  "sourcesContent": ["export enum Direction {\r\n    UP,\r\n    DOWN,\r\n    LEFT,\r\n    RIGHT\r\n}\r\n\r\nexport const oppositeDir = (dir: Direction): Direction => {\r\n    switch (dir) {\r\n        case Direction.UP:\r\n            return Direction.DOWN;\r\n        case Direction.DOWN:\r\n            return Direction.UP;\r\n        case Direction.LEFT:\r\n            return Direction.RIGHT;\r\n        case Direction.RIGHT:\r\n            return Direction.LEFT;\r\n    }\r\n};"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAAO,IAAK;AAAL,UAAK,YAAL;AACH;AACA;AACA;AACA;AAAA,GAJQ;AAOL,MAAM,cAAc,CAAC,QAA8B;AACtD,UAAQ;AAAA,SACC;AACD,aAAO;AAAA,SACN;AACD,aAAO;AAAA,SACN;AACD,aAAO;AAAA,SACN;AACD,aAAO;AAAA;AAAA;",
-  "names": []
-}

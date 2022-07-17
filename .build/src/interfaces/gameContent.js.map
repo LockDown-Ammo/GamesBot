@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/interfaces/gameContent.ts"],
-  "sourcesContent": ["import { MessageEmbed, MessageActionRow } from 'discord.js';\r\n\r\nexport interface GameContent {\r\n    embeds?: MessageEmbed[];\r\n    components?: MessageActionRow[];\r\n}\r\n"],
-  "mappings": ";;AAAA;",
-  "names": []
-}
