@@ -1,7 +1,7 @@
 import Discord, { Intents, Client, Snowflake, Interaction, Message, PartialMessage, Collection, User, MessageEmbed } from 'discord.js';
 import dotenv from 'dotenv';
 import { readdirSync, Dirent } from 'fs';
-import GameBase from './src/classes/gameBase';
+import GameBase from './src/base/gameBase';
 import TicTacToeGame from './src/games/ttt'
 import TwentyFortyEightGame from './src/games/2048'
 import BreakLockGame from './src/games/breaklock';
@@ -83,8 +83,7 @@ client.on('invalidRequestWarning', (req) => {
     req
   )
 })
-/*
-client.on('apiRequest', (req) => {
+/*client.on('apiRequest', (req) => {
   console.log(
     `API request data (Test purposes)\n`,
     req
@@ -97,14 +96,13 @@ client.on('apiResponse', (req, res) => {
     `Response: \n`,
     res
   )
-})
-*/
+})*/
 /*client.on('invalidated', () => {
   console.log('Sessioin Expired....')
 })*/
 
 client.on('interactionCreate', (interaction: Interaction) => {
-  const userGame = getPlayersGame(interaction.guild?.id as Snowflake, interaction.user?.id as Snowflake);
+  const userGame: GameBase | null = getPlayersGame(interaction.guild?.id as Snowflake, interaction.user?.id as Snowflake);
 
   if (interaction.isCommand()) return;
 
@@ -182,18 +180,18 @@ client.on('messageCreate', (message: Message) => {
       return;
     }
     if (userId === player2?.id) {
-      message.reply('Srsly, playing with yourself? I am sad that ypu have no friends...').catch(console.log);
+      message.reply('Srsly, playing with yourself? I am sad that you have no friends...').catch(console.log);
       return;
     }
     if (!playerGameMap.has(guildId)) {
       playerGameMap.set(guildId, new Map<Snowflake, GameBase>())
     }
     if (userGame) {
-      message.reply('Whoa whoa pls finish your other game first... (Think this is a mistake? Uh well maybe ur record didnt get cleared)').catch(console.log);
+      message.reply('Whoa whoa pls finish your other game first... (Think this is a mistake? Uh well maybe ur record didnt get cleared. Best way is to stay idle for 1min so that the bot auto clears the game and pray that it dosent crash ;D)').catch(console.log);
       return;
     }
     else if (player2 && playerGameMap.get(guildId)?.has(player2.id)) {
-      message.reply('Whoa whoa let them finish their game... (Think this is a mistake? Uh well maybe their record didnt get cleared)').catch(console.log);
+      message.reply('Whoa whoa let them finish their game first... (Think this is a mistake? Uh well maybe their record didnt get cleared. Best way is to stay idle for 1min so that the bot auto clears the game and pray that it dosent crash ;D)').catch(console.log);
       return;
     }
     const foundGame = Array.from(playerGameMap.get(guildId)?.values() ?? []).find(g => g.getGameId() === game.getGameId());

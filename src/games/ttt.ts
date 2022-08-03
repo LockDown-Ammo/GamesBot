@@ -1,5 +1,5 @@
 import Discord,{ CacheType, Interaction, MessageActionRow, MessageEmbed, User } from "discord.js";
-import GameBase from "../classes/gameBase";
+import GameBase from "../base/gameBase";
 import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
 

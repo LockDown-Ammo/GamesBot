@@ -1,5 +1,5 @@
 import { CacheType, Interaction, MessageEmbed } from "discord.js";
-import GameBase from "../classes/gameBase";
+import GameBase from "../base/gameBase";
 import { Direction, oppositeDir } from "../interfaces/direction";
 import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";

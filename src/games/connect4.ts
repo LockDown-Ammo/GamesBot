@@ -1,6 +1,6 @@
 import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
-import GameBase from "../classes/gameBase";
+import GameBase from "../base/gameBase";
 import Position, { up, down, left, right, isInside } from "../interfaces/position";
 import Discord, { MessageActionRow, MessageButton, MessageEmbed, User } from "discord.js";
 import { MessageButtonStyles } from "discord.js/typings/enums";
