@@ -1,2 +1,2 @@
 echo "Killing process as rate limited"
-kill 10
+kill 1
