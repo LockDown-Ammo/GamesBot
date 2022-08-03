@@ -9,6 +9,8 @@ import Connect4Game from './src/games/connect4';
 import FloodGame from './src/games/flood';
 import GameResult, { ResultType } from './src/interfaces/gameResult';
 import { exec } from 'child_process'
+import docs from './routers/docs'
+import express from 'express'
 const client: Client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -240,9 +242,8 @@ const getPlayersGame: any = (guildId: Snowflake | null, userId: Snowflake): Game
 
 client.login(process.env.TOKEN)
 
-import express from 'express'
+
 const app = express()
-
-
 app.get('/', (req: any, res: any) => res.send('Your computer has a virus ~ Tech Support'))
 app.listen(3000)
+docs(app)
