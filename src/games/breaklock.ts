@@ -42,7 +42,7 @@ export default class BreakLockGame extends GameBase {
             .setColor('#08b9bf')
             .setFooter({ text: `Playing with: ${this.gameStarter.username}` })
             .setTitle('Break Lock')
-            .setDescription(`[Click here to learn how to play](https://gameboardswebsite.lockdownammo7.repl.co/docs/#break-lock)
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#break-lock)
             \nTurn: ${this.turn}\nPrevious attempts: `)
             .setImage(`https://gameboardswebsite.lockdownammo7.repl.co/gameBot/breakLock/${this.history.length > 0 ? this.history.join('-') : ''}`)
             .setTimestamp()

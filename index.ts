@@ -137,7 +137,7 @@ client.on('messageCreate', (message: Message) => {
   if (message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase() == 'help') {
     const em = new MessageEmbed()
       .setTitle("GameBot Help")
-      .setDescription(`[Check documentations here](https://gameboardswebsite.lockdownammo7.repl.co/docs/) or visit https://gameboardswebsite.lockdownammo7.repl.co/docs/ \n`)
+      .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit https://gamesbot.lockdownammo7.repl.co/docs/ \n`)
       .addFields([
         {
           name: '🌊 Flood Game',

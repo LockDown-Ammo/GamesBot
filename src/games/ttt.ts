@@ -21,7 +21,7 @@ export default class TicTacToe extends GameBase {
             .setColor('#08b9bf')
             .setFooter({ text: `Current player: ${this.currentPlayer()?.username}` })
             .setTitle('TicTacToe')
-            .setDescription(`[Click here to learn how to play](https://gameboardswebsite.lockdownammo7.repl.co/docs/#ttt)`)
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#ttt)`)
             .setTimestamp()
 
         return {

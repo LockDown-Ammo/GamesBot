@@ -82,7 +82,7 @@ export default class Connect4Game extends GameBase {
             .setColor('#08b9bf')
             .setTitle('Connect 4')
             .setFooter({ text: `CurrentPlayer: ${this.getCurrentPlayer()?.username}` })
-            .setDescription(`[Click here to learn how to play](https://gameboardswebsite.lockdownammo7.repl.co/docs/#connect-4)
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#connect-4)
             \n${this.gameBoardToStr()}\n1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣`)
             .setTimestamp();
 

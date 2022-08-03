@@ -53,7 +53,7 @@ export default class FloodGame extends GameBase {
             .setColor('#08b9bf')
             .setTitle('Flood Game')
             .setFooter({ text: `Current player: ${this.gameStarter.username}`, iconURL: this.gameStarter.displayAvatarURL({ dynamic: false }) })
-            .setDescription(`[Click here to learn how to play](https://gameboardswebsite.lockdownammo7.repl.co/docs/#flood-game)
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#flood-game)
             \n` +this.gameBoardToString())
             .addField('Turn:', this.turn.toString())
             .setTimestamp();

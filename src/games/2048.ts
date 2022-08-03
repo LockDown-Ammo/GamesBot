@@ -32,7 +32,7 @@ export default class TwentFortyEight extends GameBase {
             .setColor('#08b9bf')
             .setFooter({ text: `Current player: ${this.gameStarter.username}` })
             .setTitle('2048 or TwentyFortyEight')
-            .setDescription(`[Click here to learn how to play](https://gameboardswebsite.lockdownammo7.repl.co/docs/#2048)`)
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#2048)`)
             .setImage(`https://gameboardswebsite.lockdownammo7.repl.co/gameBot/2048?gb=${this.gameBoardToString()}`)
             .addField('Score:', this.score.toString())
             .setTimestamp()
