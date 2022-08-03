@@ -194,11 +194,11 @@ client.on('messageCreate', (message: Message) => {
       message.reply('Whoa whoa let them finish their game first... (Think this is a mistake? Uh well maybe their record didnt get cleared. Best way is to stay idle for 1min so that the bot auto clears the game and pray that it dosent crash ;D)').catch(console.log);
       return;
     }
-    const foundGame = Array.from(playerGameMap.get(guildId)?.values() ?? []).find(g => g.getGameId() === game.getGameId());
+    /*const foundGame = Array.from(playerGameMap.get(guildId)?.values() ?? []).find(g => g.getGameId() === game.getGameId());
     if (foundGame !== undefined && foundGame.isInGame()) {
       message.reply({ content: 'Sorry, there can only be 1 instance of a game at a time!' }).catch(console.log);
       return;
-    }
+    }*/
     game.newGame(message, player2 ?? null, (result: GameResult) => {
       playerGameMap.get(guildId)?.delete(userId);
       if (player2)
