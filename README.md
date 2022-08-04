@@ -1,6 +1,6 @@
 # Discord Games Bot
 
-This is a private discord bot used in specefic private servers to play games. Its not meant for public use and likely has many bugs and will crash easily. This has been coded as a passion and the code is not open to be used for commercial purposes.
+This is a private discord bot used in specefic private servers to play games. Its not meant for public use and likely has many bugs and will crash easily. This has been coded as a passion and the code is not open to be used for commercial purposes (we ignore the fact that it can be viewed publicly)
 
 Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 
@@ -121,7 +121,7 @@ Have fun :D
 This section is for developers only and / or for the common pea sized public who considers themselves as developer even when they know nothing ( like me :D )
 I do not own any responsibility if stuff thats written in this section fries your pea- I mean brain.
 
-PS: We developers have a very good sense of humor :D
+PS: I have a very good sense of humor :D (so cringe)
 
 ## <a name="project-progression-status">Project Progression Status</a>
 
@@ -135,24 +135,25 @@ You can tell how lazy I am by the fact that I am using markdown files to generat
 
 > Runtime environment: Node JS
 
-```Javascript``` has been used to make the server you are currently on and where it processes images.
+```Javascript``` has been used to make the server where it generates dynamic images from URL parameters.
 
-```Typescript``` has been used to make the main discord bot.
+```Typescript``` has been used to make the main discord bot and the docs that you are currently veiwing.
 
 ## <a name="dependencies">Dependencies</a>
 
-Since the bot was built using ```NodeJS``` npm packages were used.
+Since both the bot and server were built using ```NodeJS``` npm packages were used.
 
 For server:
 
 - [express](https://www.npmjs.com/package/express)
 - [canvas](https://www.npmjs.com/package/canvas)
 - [fs](https://www.npmjs.com/package/fs)
-- [markdown-it](https://www.npmjs.com/package/markdown-it)
-- [generate-github-markdown-css](https://www.npmjs.com/package/generate-github-markdown-css)
 
 For bot:
 
+- [express](https://www.npmjs.com/package/express)
+- [markdown-it](https://www.npmjs.com/package/markdown-it)
+- [generate-github-markdown-css](https://www.npmjs.com/package/generate-github-markdown-css)
 - [discord.js](https://www.npmjs.com/package/discord.js)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [fs](https://www.npmjs.com/package/fs)
@@ -161,7 +162,6 @@ For bot:
 
 I have plans to add the following games:
 
-- TicTacToe
 - Hangman
 - 0h h1
 
