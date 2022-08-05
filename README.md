@@ -129,7 +129,7 @@ PS: I have a very good sense of humor :D (so cringe)
 
 I am lazy and I am a student... Do not expect frequent updates
 
-You can tell how lazy I am by the fact that I am using markdown files to generate this...
+You can tell how lazy I am by the fact that I am using markdown files to generate this (for ppl who are viewing this on docs website not github)...
 
 ## <a name="languages-and-frameworks">Languages and Frameworks</a>
 
