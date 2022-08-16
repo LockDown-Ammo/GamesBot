@@ -135,7 +135,7 @@ export default class Connect4Game extends GameBase {
         }
 
         if (this.hasWon(placedX, placedY)) {
-            this.gameOver({ result: ResultType.WINNER, name: this.turnColor() + this.player1Turn ? this.gameStarter.id : this.player2?.id ?? 'ERR' }, interaction)
+            this.gameOver({ result: ResultType.WINNER, name: (this.player1Turn ? this.gameStarter.id : this.player2?.id) ?? 'ERR' }, interaction)
         }
         else if (this.isBoardFull()) {
             this.gameOver({ result: ResultType.TIE }, interaction);
