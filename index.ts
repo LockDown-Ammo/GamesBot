@@ -1,4 +1,4 @@
-import Discord, { Intents, Client, Snowflake, Interaction, Message, PartialMessage, Collection, User, MessageEmbed } from 'discord.js';
+import Discord, { Intents, Client, Snowflake, Interaction, Message, PartialMessage, Collection, User, MessageEmbed, MessageReaction, PartialMessageReaction, PartialUser } from 'discord.js';
 import dotenv from 'dotenv';
 import fs, { readdirSync, Dirent } from 'fs';
 import GameBase from './src/base/gameBase';
@@ -126,6 +126,23 @@ client.on('interactionCreate', (interaction: Interaction) => {
   if (!userGame) return;
 
   userGame.onInteraction(interaction);
+})
+
+client.on('messageReactionAdd', (reaction: MessageReaction | PartialMessageReaction, user: User | PartialUser) => {
+  const userId = user.id;
+  const userGame = getPlayersGame(reaction.message?.guild?.id ?? null, userId);
+
+  if (!userGame)
+    return;
+  if (userGame.player1Turn && userId !== userGame.gameStarter.id)
+    return;
+  if (!userGame.player1Turn && !!userGame.player2?.id && userId !== userGame.player2.id)
+    return;
+  if (!userGame.player1Turn && !userGame.player2?.id && userId !== userGame.gameStarter.id)
+    return;
+  
+  userGame.onReaction(reaction);
+  reaction.remove();
 })
 
 client.on('messageDelete', (message: Message | PartialMessage) => {
