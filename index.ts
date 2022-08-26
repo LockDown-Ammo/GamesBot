@@ -233,7 +233,7 @@ const getPlayersGame: any = (guildId: Snowflake | null, userId: Snowflake): Game
 const helpMessage: any = (message: Message) => {
   const em = new MessageEmbed()
     .setTitle("GameBot Help")
-    .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit https://gamesbot.lockdownammo7.repl.co/docs/ \n`)
+    .setDescription(`[Check documentations here](https://gamesbot.lckdownammo7.repl.co/docs/) or visit},ttps://gamesbot.lockdownammo7.repl.co/docs/ \n`)
     .addFields([
       {
         name: '🌊 Flood Game',
@@ -263,18 +263,20 @@ client.login(process.env.TOKEN)
 
 
 const app = express()
-app.get('/', (req: any, res: any) => res.send('Your computer has a virus ~ Tech Support'))
+app.get('/', (req: any, res: any) => res.send('Your computer has a virus ~'))
 app.listen(3000)
+routerRunner()
+async function routerRunner() {
+  let routers = []
+  const routerFiles = fs.readdirSync('./routers/', { withFileTypes: true })
 
-let routers = []
-const routerFiles = fs.readdirSync('./routers/', { withFileTypes: true })
-
-for (const route of routerFiles) {
-  routers.push(import(`./routers/${route.name}`))
-}
-try {
-  routers.forEach(r => r.default(app))
-}
-catch (e) {
-  console.log(e)
+  for (const route of routerFiles) {
+    routers.push(await import(`./routers/${route.name.slice(0, -2)}js`))
+  }
+  try {
+    routers.forEach(r => r.default.default(app))
+  }
+  catch (e) {
+    console.log(e)
+  }
 }
