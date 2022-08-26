@@ -1,4 +1,4 @@
-import { CacheType, Interaction, MessageEmbed } from "discord.js";
+import { CacheType, Interaction, MessageEmbed, MessageReaction } from "discord.js";
 import GameBase from "../base/gameBase";
 import { Direction, oppositeDir } from "../interfaces/direction";
 import { GameContent } from "../interfaces/gameContent";
@@ -46,7 +46,7 @@ export default class TwentFortyEight extends GameBase {
         const embed = new MessageEmbed()
             .setColor('#f2e641')
             .setTitle('2048 or TwentyFortyEight')
-            .setFooter({ text: "Whoops something overflowed :D"})
+            .setFooter({ text: "Whoops something overflowed :D" })
             .setDescription(`GAME OVER!\n${this.getWinnerText(result)}\n\nScore: ${this.score}`)
             .setImage(`https://gameboardswebsite.lockdownammo7.repl.co/gameBot/2048?gb=${this.gameBoardToString()}`)
             .setTimestamp()
@@ -62,7 +62,7 @@ export default class TwentFortyEight extends GameBase {
             newPos = { x: Math.floor(Math.random() * WIDTH), y: Math.floor(Math.random() * HEIGHT) };
         } while (this.gameBoard[newPos.y * HEIGHT + newPos.x] != 0);
 
-        
+
         this.gameBoard[newPos.y * HEIGHT + newPos.x] = (Math.random() * 100) < 25 ? 2 : 1;
     }
     private gameBoardToString(): String {
@@ -181,15 +181,16 @@ export default class TwentFortyEight extends GameBase {
                 moved = this.moveDown();
                 break;
         }
-      
+
         if (moved)
             this.placeNewRandTile();
         this.step(false);
-        if(this.mergedNum >= 10)
+        if (this.mergedNum >= 10)
             this.gameOver({ result: ResultType.WINNER, name: this.gameStarter.id, score: `${this.score}` })
         else if (this.isBoardFull() && this.possibleMoves() <= 0)
             this.gameOver({ result: ResultType.LOSER, name: this.gameStarter.id, score: `${this.score}` }, interaction);
         else
             interaction.update(this.getContent()).catch(e => this.handleError(e, 'update interaction'));
     }
+    public onReaction(reaction: MessageReaction): void { }
 }

@@ -2,7 +2,7 @@ import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
 import GameBase from "../base/gameBase";
 import Position, { up, down, left, right, isInside } from "../interfaces/position";
-import Discord, { MessageActionRow, MessageActionRowComponentResolvable, MessageButton, MessageComponent, MessageEmbed, User } from "discord.js";
+import Discord, { MessageActionRow, MessageActionRowComponentResolvable, MessageButton, MessageComponent, MessageEmbed, MessageReaction, User } from "discord.js";
 
 const HEIGHT = 3
 const WIDTH = 3
@@ -114,6 +114,8 @@ export default class BreakLockGame extends GameBase {
         }
 
     }
+    public onReaction(reaction: MessageReaction): void { }
+
     private componentGenerator(): MessageActionRow[] {
         let components: MessageActionRow[] = [];
         for (let y = 0; y < HEIGHT; y++) {

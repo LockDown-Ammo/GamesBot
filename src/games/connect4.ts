@@ -2,7 +2,7 @@ import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
 import GameBase from "../base/gameBase";
 import Position, { up, down, left, right, isInside } from "../interfaces/position";
-import Discord, { MessageActionRow, MessageButton, MessageEmbed, User } from "discord.js";
+import Discord, { MessageActionRow, MessageButton, MessageEmbed, MessageReaction, User } from "discord.js";
 import { MessageButtonStyles } from "discord.js/typings/enums";
 
 const HEIGHT = 7
@@ -147,6 +147,8 @@ export default class Connect4Game extends GameBase {
 
 
     }
+    public onReaction(reaction: MessageReaction): void { }
+
     protected step(edit?: boolean): void {
         this.player1Turn = this.player1Turn ? false : true;
         super.step(false)

@@ -2,7 +2,7 @@ import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
 import GameBase from "../base/gameBase";
 import Position, { up, down, left, right, isInside } from "../interfaces/position";
-import Discord, { MessageActionRow, MessageButton, MessageEmbed } from "discord.js";
+import Discord, { MessageActionRow, MessageButton, MessageEmbed, MessageReaction } from "discord.js";
 
 const HEIGHT = 13
 const WIDTH = 13
@@ -119,4 +119,5 @@ export default class FloodGame extends GameBase {
     else if (!this.result)
       this.gameOver({ result: ResultType.ERROR }, interaction);
   }
+  public onReaction(reaction: MessageReaction): void { }
 }

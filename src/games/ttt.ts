@@ -1,4 +1,4 @@
-import Discord,{ CacheType, Interaction, MessageActionRow, MessageEmbed, User } from "discord.js";
+import Discord,{ CacheType, Interaction, MessageActionRow, MessageEmbed, MessageReaction, User } from "discord.js";
 import GameBase from "../base/gameBase";
 import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
@@ -72,6 +72,7 @@ export default class TicTacToe extends GameBase {
         this.player1Turn = !this.player1Turn
         interaction.update(this.getContent()).catch(e => this.handleError(e, 'update interaction'));
     }
+    public onReaction(reaction: MessageReaction): void { }
 
     private currentPlayer(): User | null {
         return this.player1Turn ? this.gameStarter : this.player2;
