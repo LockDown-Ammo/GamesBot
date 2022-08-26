@@ -1,6 +1,6 @@
 import Discord, { Intents, Client, Snowflake, Interaction, Message, PartialMessage, Collection, User, MessageEmbed } from 'discord.js';
 import dotenv from 'dotenv';
-import { readdirSync, Dirent } from 'fs';
+import fs, { readdirSync, Dirent } from 'fs';
 import GameBase from './src/base/gameBase';
 import TicTacToeGame from './src/games/ttt'
 import TwentyFortyEightGame from './src/games/2048'
@@ -9,7 +9,6 @@ import Connect4Game from './src/games/connect4';
 import FloodGame from './src/games/flood';
 import GameResult, { ResultType } from './src/interfaces/gameResult';
 import { exec } from 'child_process'
-import docs from './routers/docs'
 import express from 'express'
 const client: Client = new Client({
   intents: [
@@ -135,32 +134,7 @@ client.on('messageCreate', (message: Message) => {
   const userId = message.author?.id as Snowflake
   const command = games.find(g => g == message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase())
   if (message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase() == 'help') {
-    const em = new MessageEmbed()
-      .setTitle("GameBot Help")
-      .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit https://gamesbot.lockdownammo7.repl.co/docs/ \n`)
-      .addFields([
-        {
-          name: '🌊 Flood Game',
-          value: '>>flood'
-        },
-        {
-          name: '🟡 Connect 4',
-          value: '>>connect4'
-        },
-        {
-          name: '🔓 Break Lock',
-          value: '>>breaklock'
-        },
-        {
-          name: '2️⃣ 2048',
-          value: '>>2048'
-        },
-        {
-          name: '❌ TicTacToe',
-          value: '>>ttt'
-        }
-      ])
-    message.reply({ embeds: [em] })
+    helpMessage(message)
   }
   if (!command || !userId)
     return;
@@ -240,10 +214,51 @@ const getPlayersGame: any = (guildId: Snowflake | null, userId: Snowflake): Game
   return userGame;
 };
 
+const helpMessage: any = (message: Message) => {
+  const em = new MessageEmbed()
+    .setTitle("GameBot Help")
+    .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit https://gamesbot.lockdownammo7.repl.co/docs/ \n`)
+    .addFields([
+      {
+        name: '🌊 Flood Game',
+        value: '>>flood'
+      },
+      {
+        name: '🟡 Connect 4',
+        value: '>>connect4'
+      },
+      {
+        name: '🔓 Break Lock',
+        value: '>>breaklock'
+      },
+      {
+        name: '2️⃣ 2048',
+        value: '>>2048'
+      },
+      {
+        name: '❌ TicTacToe',
+        value: '>>ttt'
+      }
+    ])
+  message.reply({ embeds: [em] }).catch(e => { })
+}
+
 client.login(process.env.TOKEN)
 
 
 const app = express()
 app.get('/', (req: any, res: any) => res.send('Your computer has a virus ~ Tech Support'))
 app.listen(3000)
-docs(app)
+
+let routers = []
+const routerFiles = fs.readdirSync('./routers/', { withFileTypes: true })
+
+for (const route of routerFiles) {
+  routers.push(import(`./routers/${route.name}`))
+}
+try {
+  routers.forEach(r => r.default(app))
+}
+catch (e) {
+  console.log(e)
+}
