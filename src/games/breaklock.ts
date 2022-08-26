@@ -99,8 +99,8 @@ export default class BreakLockGame extends GameBase {
                     this.currentPattern = [];
                     this.selectedTurn = 0;
                     this.newCurrentGameBoard();
-                    interaction.update(this.getContent()).catch(e => super.handleError(e, 'update interaction'));
                     this.turn ++;
+                    interaction.update(this.getContent()).catch(e => super.handleError(e, 'update interaction'));
                     this.step(false);
                 }
             } else {

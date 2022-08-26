@@ -40,6 +40,15 @@ client.on('debug', (m) => {
   // exec('sh rateLimited.sh ./');
   if (!m.startsWith('[WS => Shard 0] Heartbeat') && !m.startsWith('[WS => Shard 0] [Heartbeat'))
     console.log(m)
+  if (m.startsWith("Hit a 429")) {
+    exec('sh rateLimited.sh', (error, stdout, stderr) => {
+      console.log(stdout);
+      console.log(stderr);
+      if (error !== null) {
+        console.log(`Rate Limit Kill error: ${error}`);
+      }
+    })
+  }
 })
 
 client.on('rateLimit', (rlInfo) => {
@@ -52,6 +61,13 @@ client.on('rateLimit', (rlInfo) => {
     `Route: ${rlInfo.route}\n`,
     `Global: ${rlInfo.global}\n`
   )
+  exec('sh rateLimited.sh', (error, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    if (error !== null) {
+      console.log(`Rate Limit Kill error: ${error}`);
+    }
+  })
 })
 
 client.on('shardDisconnect', (closeEvent, shardId) => {
