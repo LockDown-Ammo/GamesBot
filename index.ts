@@ -10,6 +10,7 @@ import FloodGame from './src/games/flood';
 import GameResult, { ResultType } from './src/interfaces/gameResult';
 import { exec } from 'child_process'
 import express from 'express'
+import HangmanGame from './src/games/hangman';
 const client: Client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -27,7 +28,8 @@ const commandGameMap: CommandObject = {
   'connect4': () => new Connect4Game(),
   'breaklock': () => new BreakLockGame(),
   '2048': () => new TwentyFortyEightGame(),
-  'ttt': () => new TicTacToeGame()
+  'ttt': () => new TicTacToeGame(),
+  'hangman': () => new HangmanGame()
 }
 const playerGameMap = new Map<Snowflake, Map<Snowflake, GameBase>>();
 
