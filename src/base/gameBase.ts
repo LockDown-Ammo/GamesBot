@@ -1,4 +1,4 @@
-import Discord, { DiscordAPIError, Interaction, Message, MessageActionRow, MessageButton, Snowflake, User } from 'discord.js';
+import Discord, { DiscordAPIError, Interaction, Message, MessageActionRow, MessageButton, MessageReaction, Snowflake, User } from 'discord.js';
 
 import { GameContent } from "../interfaces/gameContent";
 import GameResult, { ResultType } from "../interfaces/gameResult";
@@ -20,6 +20,7 @@ export default abstract class GameBase {
 
     protected abstract getContent(): GameContent;
     protected abstract getGameOverContent(result: GameResult): GameContent;
+    public abstract onReaction(reaction: MessageReaction): void;
     public abstract onInteraction(interaction: Interaction): void;
 
     constructor(gameType: string, isMultiplayer: boolean) {
