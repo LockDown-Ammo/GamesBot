@@ -15,6 +15,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [Break Lock](#break-lock)
 - [2048](#2048)
 - [TicTacToe](#ttt)
+- [Hangman](#hangman)
   
     > More Coming soon...
 
@@ -112,6 +113,23 @@ Have fun :D
 > 💡 Info: 
         - Command: >>ttt                      ( Case-Insensitive )
         - Multiplayer: True                       ( 2 Players )
+```
+
+## <a name="hangman">Hangman</a>
+
+Its a very nerdy game. The bot picks up a random word which you need to guess. You just need to guess what letters are there in the word. If the letter you guessed is correct then it will show u at what position the letter is appearing. Now using this you need to guess others also in the same way. However if you guessed an incorrect letter, a picture of a hanging man will start to form. Every wrong guess a new part of the hanging man will appear (Total 5 parts). If the picture gets completed you loose. If you complete the word then you win.
+To guess a letter u need to react with an emoji of that letter in the game message.
+
+Have fun :D
+
+```text
+> ⚠️ Feature: Images and GIFs for better understanding coming soon...
+```
+
+```text
+> 💡 Info: 
+        - Command: >>hangman                      ( Case-Insensitive )
+        - Multiplayer: False                             ( - )
 ```
 
 ---
