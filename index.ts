@@ -273,6 +273,10 @@ const helpMessage: any = (message: Message) => {
       {
         name: '❌ TicTacToe',
         value: '>>ttt'
+      },
+      {
+        name: '🤓 Hangman',
+        value: '>>hangman'
       }
     ])
   message.reply({ embeds: [em] }).catch(e => { })
