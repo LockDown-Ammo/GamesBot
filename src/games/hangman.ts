@@ -60,9 +60,9 @@ export default class HangmanGame extends GameBase {
     protected getContent(): GameContent {
         const embed = new MessageEmbed()
             .setTitle('Hangman')
-            .setFooter({ text: `Current player: ${this.gameStarter}`, iconURL: this.gameStarter.displayAvatarURL({ dynamic: false }) })
+            .setFooter({ text: `Current player: ${this.gameStarter.username}`, iconURL: this.gameStarter.displayAvatarURL({ dynamic: false }) })
             .setColor('#08b9bf')
-            .setDescription(this.getDescription())
+            .setDescription(`[Click here to learn how to play](https://gamesbot.lockdownammo7.repl.co/docs/#hangman)\n` + this.getDescription())
             .addField('Letters Guessed', this.guesssed.length == 0 ? '\u200b' : this.guesssed.join(' '))
             .addField('How To Play', 'React to this message using the emojis that look like letters (🅰️, 🇹, )')
             .setTimestamp()
