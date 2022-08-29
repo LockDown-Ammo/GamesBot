@@ -202,7 +202,7 @@ For bot:
 
 I have plans to add the following games:
 
-- Hangman
+- Akinator
 - 0h h1
 
 ---
