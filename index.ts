@@ -11,6 +11,7 @@ import GameResult, { ResultType } from './src/interfaces/gameResult';
 import { exec } from 'child_process'
 import express from 'express'
 import HangmanGame from './src/games/hangman';
+import Othello from './src/games/othello';
 const client: Client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -29,7 +30,8 @@ const commandGameMap: CommandObject = {
   'breaklock': () => new BreakLockGame(),
   '2048': () => new TwentyFortyEightGame(),
   'ttt': () => new TicTacToeGame(),
-  'hangman': () => new HangmanGame()
+  'hangman': () => new HangmanGame(),
+  'othello': () => new Othello()
 }
 const playerGameMap = new Map<Snowflake, Map<Snowflake, GameBase>>();
 
@@ -277,6 +279,10 @@ const helpMessage: any = (message: Message) => {
       {
         name: '🤓 Hangman',
         value: '>>hangman'
+      },
+      {
+        name: '⏺️ Othello',
+        value: '>>othello'
       }
     ])
   message.reply({ embeds: [em] }).catch(e => { })
