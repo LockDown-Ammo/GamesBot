@@ -137,7 +137,7 @@ Have fun :D
 
 You can choose the tile you want to pick fom the drop down menu.
 Rules kinda hard to explain so:
-[Click here to learn how to play the game](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english) or https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english')
+[Click here to learn how to play the game](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english) or https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english
 
 
 Have fun :D
