@@ -139,6 +139,7 @@ You can choose the tile you want to pick fom the drop down menu.
 Rules kinda hard to explain so:
 [Click here to learn how to play the game](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english) or https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english
 
+PS: Player with most number of tiles wins. 
 
 Have fun :D
 
@@ -193,6 +194,7 @@ For bot:
 - [markdown-it](https://www.npmjs.com/package/markdown-it)
 - [generate-github-markdown-css](https://www.npmjs.com/package/generate-github-markdown-css)
 - [discord.js](https://www.npmjs.com/package/discord.js)
+- [@discordjs/builders](https://www.npmjs.com/package/@discordjs/builders)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [fs](https://www.npmjs.com/package/fs)
 
