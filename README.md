@@ -16,6 +16,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [2048](#2048)
 - [TicTacToe](#ttt)
 - [Hangman](#hangman)
+- [Othello](#othello)
   
     > More Coming soon...
 
@@ -119,6 +120,25 @@ Have fun :D
 
 Its a very nerdy game. The bot picks up a random word which you need to guess. You just need to guess what letters are there in the word. If the letter you guessed is correct then it will show u at what position the letter is appearing. Now using this you need to guess others also in the same way. However if you guessed an incorrect letter, a picture of a hanging man will start to form. Every wrong guess a new part of the hanging man will appear (Total 5 parts). If the picture gets completed you loose. If you complete the word then you win.
 To guess a letter u need to react with an emoji of that letter in the game message.
+
+Have fun :D
+
+```text
+> ⚠️ Feature: Images and GIFs for better understanding coming soon...
+```
+
+```text
+> 💡 Info: 
+        - Command: >>hangman                      ( Case-Insensitive )
+        - Multiplayer: False                             ( - )
+```
+
+## <a name="othello">Othello / Reversi</a>
+
+You can choose the tile you want to pick fom the drop down menu.
+Rules kinda hard to explain so:
+[Click here to learn how to play the game](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english) or https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english')
+
 
 Have fun :D
 
