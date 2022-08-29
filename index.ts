@@ -254,7 +254,7 @@ const getPlayersGame: any = (guildId: Snowflake | null, userId: Snowflake): Game
 const helpMessage: any = (message: Message) => {
   const em = new MessageEmbed()
     .setTitle("GameBot Help")
-    .setDescription(`[Check documentations here](https://gamesbot.lckdownammo7.repl.co/docs/) or visit},ttps://gamesbot.lockdownammo7.repl.co/docs/ \n`)
+    .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit},ttps://gamesbot.lockdownammo7.repl.co/docs/ \n`)
     .addFields([
       {
         name: '🌊 Flood Game',
