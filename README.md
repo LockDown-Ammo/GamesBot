@@ -149,8 +149,8 @@ Have fun :D
 
 ```text
 > 💡 Info: 
-        - Command: >>hangman                      ( Case-Insensitive )
-        - Multiplayer: False                             ( - )
+        - Command: >>othello                      ( Case-Insensitive )
+        - Multiplayer: True                           ( 2 players )
 ```
 
 ---
