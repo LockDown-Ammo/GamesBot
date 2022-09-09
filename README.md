@@ -6,7 +6,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 
 ---
 
-# Table of Contents
+# <a name="contents">Table of Contents</a>
 
 ### [Games and How to use them:](#games-and-how-to-use-them)
 
@@ -137,6 +137,7 @@ Have fun :D
 
 You can choose the tile you want to pick fom the drop down menu.
 Rules kinda hard to explain so:
+
 [Click here to learn how to play the game](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english) or https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english
 
 PS: Player with most number of tiles wins. 
@@ -192,7 +193,7 @@ For bot:
 
 - [express](https://www.npmjs.com/package/express)
 - [markdown-it](https://www.npmjs.com/package/markdown-it)
-- [generate-github-markdown-css](https://www.npmjs.com/package/generate-github-markdown-css)
+  <!-- - [generate-github-markdown-css](https://www.npmjs.com/package/generate-github-markdown-css) -->
 - [discord.js](https://www.npmjs.com/package/discord.js)
 - [@discordjs/builders](https://www.npmjs.com/package/@discordjs/builders)
 - [dotenv](https://www.npmjs.com/package/dotenv)
@@ -204,5 +205,6 @@ I have plans to add the following games:
 
 - Akinator
 - 0h h1
+- 0h n0
 
 ---
