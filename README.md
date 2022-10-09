@@ -17,6 +17,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [TicTacToe](#ttt)
 - [Hangman](#hangman)
 - [Othello](#othello)
+- [Akinator](#akinator)
   
     > More Coming soon...
 
@@ -154,6 +155,22 @@ Have fun :D
         - Multiplayer: True                           ( 2 players )
 ```
 
+## <a name="aki">Akinator</a>
+
+You just do whtever the bot says and think of a character/object/animal before starting
+
+Have fun :D
+
+```text
+> ⚠️ Feature: Images and GIFs for better understanding coming soon...
+```
+
+```text
+> 💡 Info: 
+        - Command: >>aki                          ( Case-Insensitive )
+        - Multiplayer: False                             ( - )
+```
+
 ---
 
 # <a name="project-info-and-other-developer-nerdy-stuff-1">Project Info and other Developer nerdy stuff</a>
@@ -203,7 +220,7 @@ For bot:
 
 I have plans to add the following games:
 
-- Akinator
+- Wordle
 - 0h h1
 - 0h n0
 
