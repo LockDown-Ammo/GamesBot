@@ -17,7 +17,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [TicTacToe](#ttt)
 - [Hangman](#hangman)
 - [Othello](#othello)
-- [Akinator](#akinator)
+- [Akinator](#aki)
   
     > More Coming soon...
 
