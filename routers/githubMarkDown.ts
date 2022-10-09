@@ -1,14 +1,5 @@
 import fs from 'fs'
-import md from 'markdown-it'
-const marked = md({
-  html: true,
-  linkify: true,
-  typographer: true,
-  langPrefix: '',
-});
 export default async (app: any) => {
-
-  const githubMarkdownCSS = await import('generate-github-markdown-css')
   app.get('/githubMarkDown.css', async (req: any, res: any) => {
     res.set({
       'Access-Control-Allow-Origin': '*'
