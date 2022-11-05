@@ -1,18 +1,19 @@
 import Discord, { Intents, Client, Snowflake, Interaction, Message, PartialMessage, Collection, User, MessageEmbed, MessageReaction, PartialMessageReaction, PartialUser } from 'discord.js';
 import dotenv from 'dotenv';
 import fs, { readdirSync, Dirent } from 'fs';
+import GameResult, { ResultType } from './src/interfaces/gameResult';
+import { exec } from 'child_process'
+import express from 'express'
 import GameBase from './src/base/gameBase';
 import TicTacToeGame from './src/games/ttt'
 import TwentyFortyEightGame from './src/games/2048'
 import BreakLockGame from './src/games/breaklock';
 import Connect4Game from './src/games/connect4';
 import FloodGame from './src/games/flood';
-import GameResult, { ResultType } from './src/interfaces/gameResult';
-import { exec } from 'child_process'
-import express from 'express'
 import HangmanGame from './src/games/hangman';
 import Othello from './src/games/othello';
 import Akinator from './src/games/akinator';
+import OhnO from './src/games/0hn0';
 const client: Client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -33,7 +34,9 @@ const commandGameMap: CommandObject = {
   'ttt': () => new TicTacToeGame(),
   'hangman': () => new HangmanGame(),
   'othello': () => new Othello(),
-  'aki': () => new Akinator()
+  'aki': () => new Akinator(),
+  '0hn0': () => new OhnO(),
+  'ohno': () => new OhnO()
 }
 const playerGameMap = new Map<Snowflake, Map<Snowflake, GameBase>>();
 
@@ -171,7 +174,8 @@ client.on('messageCreate', (message: Message) => {
   const userGame = getPlayersGame(message.guild?.id as Snowflake, message.author?.id as Snowflake);
   const guildId = message.guild?.id as Snowflake
   const userId = message.author?.id as Snowflake
-  const command = games.find(g => g == message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase())
+  const command = Object.keys(commandGameMap).find(g => g == message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase());
+  //games.find(g => g == message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase())
   if (message.content.slice(prefix.length).split(/ +/).shift()!.toLowerCase() == 'help') {
     helpMessage(message)
   }
