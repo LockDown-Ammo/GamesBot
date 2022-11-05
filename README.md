@@ -18,6 +18,7 @@ Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
 - [Hangman](#hangman)
 - [Othello](#othello)
 - [Akinator](#aki)
+- [0hn0](#0hn0)
   
     > More Coming soon...
 
@@ -168,6 +169,25 @@ Have fun :D
 ```text
 > 💡 Info: 
         - Command: >>aki                          ( Case-Insensitive )
+        - Multiplayer: False                             ( - )
+```
+
+## <a name="0hn0">0hn0</a>
+
+Another complex game which is hard to understand but here ya go.
+In this game a gameboard is provided with random red dots and blue dots. The red dots are considered as wall while blue dots with values are well.... values. Rest of the gameboard has blank dots. You can change the blank dots to wall or blue dot by clicking on them. It cycles from Unknown => Dot => Wall => Unknown for each click. You need to make sure that the blue values can see the same number of blue dots as its value in all directions (diagonals dont count). A wall will block a value to see any further in that direction. Use a combination of dots and walls to satisfy every value and complete the game!!
+
+PS: An isolated dot with walls on all 4 sides is not allowed
+
+Have fun :D
+
+```text
+> ⚠️ Feature: Images and GIFs for better understanding coming soon...
+```
+
+```text
+> 💡 Info: 
+        - Command: >>0hn0                          ( Case-Insensitive )
         - Multiplayer: False                             ( - )
 ```
 
