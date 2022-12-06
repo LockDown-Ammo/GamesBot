@@ -68,7 +68,6 @@ export default class Akinator extends GameBase {
       await this.aki.start();
       this.currentDisplay = 'QUESTION';
       this.step(false)
-      console.log(Date.now() - d)
       await interaction.editReply(this.getContent()).catch(async e => {
         await this.aki?.win();
         this.currentDisplay = 'THEME_CHOICE';
