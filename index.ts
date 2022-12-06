@@ -149,7 +149,7 @@ client.on('messageReactionAdd', (reaction: MessageReaction | PartialMessageReact
     return;
   if (!userGame.player1Turn && !userGame.player2?.id && userId !== userGame.gameStarter.id)
     return;
-  
+
   userGame.onReaction(reaction);
   reaction.remove();
 })
@@ -259,8 +259,9 @@ const getPlayersGame: any = (guildId: Snowflake | null, userId: Snowflake): Game
 
 const helpMessage: any = (message: Message) => {
   const em = new MessageEmbed()
+    .setColor('RANDOM')
     .setTitle("GameBot Help")
-    .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit},ttps://gamesbot.lockdownammo7.repl.co/docs/ \n`)
+    .setDescription(`[Check documentations here](https://gamesbot.lockdownammo7.repl.co/docs/) or visit https://gamesbot.lockdownammo7.repl.co/docs/ \n`)
     .addFields([
       {
         name: '🌊 Flood Game',
@@ -293,6 +294,10 @@ const helpMessage: any = (message: Message) => {
       {
         name: '🔮 Akinator',
         value: '>>aki'
+      },
+      {
+        name: `🟥 0hn0`,
+        value: `>>0hn0`
       }
     ])
   message.reply({ embeds: [em] }).catch(e => { })
