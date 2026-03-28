@@ -1,8 +1,6 @@
 # Discord Games Bot
 
-This is a private discord bot used in specefic private servers to play games. Its not meant for public use and likely has many bugs and will crash easily. This has been coded as a passion and the code is not open to be used for commercial purposes (we ignore the fact that it can be viewed publicly)
-
-Developer: Anonymous [ Some may know me as Whatsapp / LockDownAmmo :D ]
+This is a private discord bot used in specefic private servers to play games. Its not meant for public use and likely has many bugs. This has been coded as a passion project.
 
 ---
 
